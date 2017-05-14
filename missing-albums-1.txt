@@ -1,144 +1,4 @@
-WARNING:root:Album Not Found: Alder | Long Way Down
-WARNING:root:Album Not Found: Alkaline Trio | Good Mourning
-WARNING:root:Album Not Found: Andrew Bird's Bowl of Fire | The Swimming Hour
-WARNING:root:Album Not Found: Aphex Twin | Selected Ambient Works 85-92
-WARNING:root:Album Not Found: Apoptygma Berzerk | Kathy's Song (Come Lie Next to Me)
-WARNING:root:Album Not Found: Arcade Fire | Arcade Fire
-WARNING:root:Album Not Found: Arcade Fire | The Suburbs
-WARNING:root:Album Not Found: Archer Prewitt | White Sky
-WARNING:root:Album Not Found: Aretha Franklin | The Very Best of Aretha Franklin, Vol. 1
-WARNING:root:Album Not Found: Aretha Franklin | The Very Best of Aretha Franklin_ The '70s
-WARNING:root:Album Not Found: Ariel Pink's Haunted Graffiti | Before Today
-WARNING:root:Album Not Found: Armchair Martian vs. Bad Astronaut | War of the Worlds
-WARNING:root:Album Not Found: Bad Religion | 80-85
-WARNING:root:Album Not Found: Bad Religion | Against the Grain
-WARNING:root:Album Not Found: Bad Religion | Generator
-WARNING:root:Album Not Found: Bad Religion | Into the Unknown
-WARNING:root:Album Not Found: Bad Religion | No Control
-WARNING:root:Album Not Found: Badly Drawn Boy | About a Boy
-ERROR:root:General Album Failure: ./Bad_Religion
- | 'NoneType' object is not iterable
-WARNING:root:Album Not Found: Bauhaus | Bela Lugosi's Dead
-WARNING:root:Album Not Found: Bauhaus | Crackle
-WARNING:root:Album Not Found: Beck | Mellow Gold
-WARNING:root:Album Not Found: Beck | Mutations
-WARNING:root:Album Not Found: Beck | One Foot in the Grave
-WARNING:root:Album Not Found: Beck | Sea Change
-WARNING:root:Album Not Found: Beethoven; Chicago Symphony Orchestra, Sir Georg Solti | Symphony no. 9
-WARNING:root:Album Not Found: Ben Folds Five | Naked Baby Photos
-WARNING:root:Album Not Found: Ben Folds Five | Whatever And Ever Amen (Special Expanded Edition)
-WARNING:root:Album Not Found: Best Coast | Crazy for You
-WARNING:root:Album Not Found: Big Black | Atomizer
-WARNING:root:Album Not Found: Big Star | 3rd
-WARNING:root:Album Not Found: bis | The New Transistor Heroes
-WARNING:root:Album Not Found: Björk | Debut
-WARNING:root:Album Not Found: Björk | Medúlla
-WARNING:root:Album Not Found: Björk | Selmasongs
-WARNING:root:Album Not Found: Björk | Vespertine
-WARNING:root:Album Not Found: Black Sabbath | Vol 4
-ERROR:root:General Album Failure: ./Black Tape For A Blue Girl
- | 'NoneType' object is not iterable
-ERROR:root:General Album Failure: ./Black Tape for a Blue Girl
- | 'NoneType' object is not iterable
-WARNING:root:Album Not Found: Bo Diddley | The Chess Box
-WARNING:root:Album Not Found: Bo Diddley | The Chess Years 1955 - 1974
-WARNING:root:Album Not Found: Bob Dylan | Another Side of Bob Dylan
-WARNING:root:Album Not Found: Bob Dylan | Greatest Hits
-WARNING:root:Album Not Found: Bob Dylan & The Band | The Basement Tapes
-WARNING:root:Album Not Found: Bob_Dylan | Greatest_Hits
-WARNING:root:Album Not Found: Bon Iver | Bon Iver, Bon Iver
-WARNING:root:Album Not Found: Bonnie _Prince_ Billy | I See a Darkness
-WARNING:root:Album Not Found: Bonnie _Prince_ Billy | Master and Everyone
-WARNING:root:Album Not Found: Bonnie _Prince_ Billy | The Letting Go
-WARNING:root:Album Not Found: Boredoms | Super æ
-WARNING:root:Album Not Found: Brian Eno | Ambient 1_ Music for Airports
-WARNING:root:Album Not Found: Brian Eno & David Byrne | My Life in the Bush of Ghosts
-WARNING:root:Album Not Found: Buddy Holly | The Definitive Collection
-WARNING:root:Album Not Found: Built to Spill | Keep It Like a Secret
-WARNING:root:Album Not Found: Buzzcocks | A Different Kind of Tension _ Parts 1, 2, 3
-WARNING:root:Album Not Found: CAN | Ege Bamyasi
-WARNING:root:Album Not Found: CAN | Future Days
-WARNING:root:Album Not Found: CAN | Tago Mago
-WARNING:root:Album Not Found: Carl Perkins | Up Through the Years 1954-57
-WARNING:root:Album Not Found: Chemlab | East Side Militia
-WARNING:root:Album Not Found: Christian Death | Sex and Drugs and Jesus Christ
-WARNING:root:Album Not Found: Chromatics | Kill for Love
-WARNING:root:Album Not Found: Chuck Berry | Chuck Berry Is on Top
-WARNING:root:Album Not Found: Chuck Berry | Johnny B. Goode_ His Complete '50s Chess Recordings
-WARNING:root:Album Not Found: Chuck Berry | St. Louis to Liverpool
-WARNING:root:Album Not Found: Chuck Berry | The Anthology
-WARNING:root:Album Not Found: Chuck Berry | The Definitive Collection
-WARNING:root:Album Not Found: Clinic | Internal Wrangler
-WARNING:root:Album Not Found: Clint Mansell | Moon
-ERROR:root:General Album Failure: ./Clint_Mansell
- | 'NoneType' object is not iterable
-WARNING:root:Album Not Found: Cluster | Zuckerzeit
-WARNING:root:Album Not Found: Coil | Gold Is the Metal (With the Broadest Shoulders)
-WARNING:root:Album Not Found: Compilations | 100 Tears_ A Tribute to the Cure
-WARNING:root:Album Not Found: Compilations | 20 Greatest Hits
-WARNING:root:Album Not Found: Compilations | 3 Feet High and Rising
-WARNING:root:Album Not Found: Compilations | Amélie
-WARNING:root:Album Not Found: Compilations | Awake
-WARNING:root:Album Not Found: Compilations | Back to Mono (1958-1969)
-WARNING:root:Album Not Found: Compilations | Batman Forever_ Music From the Motion Picture
-WARNING:root:Album Not Found: Compilations | Beneath the Icy Floe, Volume 3
-WARNING:root:Album Not Found: Compilations | Channel Orange
-WARNING:root:Album Not Found: Compilations | Covered in Black_ An Industrial Tribute to the Kings of High Voltage AC_DC
-WARNING:root:Album Not Found: Compilations | Critical M@55, Volume 3
-WARNING:root:Album Not Found: Compilations | Future Wave
-WARNING:root:Album Not Found: Compilations | Give 'Em the Boot
-WARNING:root:Album Not Found: Compilations | Global Underground 002_ Paul Oakenfold in New York
-WARNING:root:Album Not Found: Compilations | Industrial Confusion
-WARNING:root:Album Not Found: Compilations | Industrial Madness
-WARNING:root:Album Not Found: Compilations | Industrial Mix Machine
-WARNING:root:Album Not Found: Compilations | Industrial Revolution_ 3rd Edition
-WARNING:root:Album Not Found: Compilations | Insound and Griffin Technology Present_ Pushing Product 8 Fall '06
-WARNING:root:Album Not Found: Compilations | Lost in Translation
-WARNING:root:Album Not Found: Compilations | Marche Slav and Other Russian Favorites
-WARNING:root:Album Not Found: Compilations | MTV 120 Minutes Live
-WARNING:root:Album Not Found: Compilations | Off the Wall
-WARNING:root:Album Not Found: Compilations | One Word Extinguisher
-WARNING:root:Album Not Found: Compilations | Past Masters, Volume Two
-WARNING:root:Album Not Found: Compilations | Rushmore
-WARNING:root:Album Not Found: Compilations | Saturday Night Fever
-WARNING:root:Album Not Found: Compilations | Settle
-WARNING:root:Album Not Found: Compilations | The 2 Tone Collection_ A Checkered Past
-WARNING:root:Album Not Found: Compilations | The Definitive Collection
-WARNING:root:Album Not Found: Compilations | The Harder They Come
-WARNING:root:Album Not Found: Compilations | The Mod Squad
-WARNING:root:Album Not Found: Compilations | The No. 1's
-WARNING:root:Album Not Found: Compilations | The Very Best of Marvin Gaye
-WARNING:root:Album Not Found: Compilations | The Very Best of the Drifters
-WARNING:root:Album Not Found: Compilations | Trainspotting
-WARNING:root:Album Not Found: Compilations | Trance Europe, Vol. 2_ Aural Electronic Dreams
-WARNING:root:Album Not Found: Compilations | Tranceport
-WARNING:root:Album Not Found: Compilations | TV Terror_ Felching a Dead Horse
-WARNING:root:Album Not Found: Compilations | War of the Worlds
-WARNING:root:Album Not Found: Copland; Mehta, Doráti, Horne, Marriner | Fanfare For the Common Man _ Appalachian Spring _ El salón México _ Dance Symphony _ Rode
-WARNING:root:Album Not Found: Copland; Mehta, Doráti, Horne, Marriner | Fanfare For the Common Man _ Appalachian Spring _ El salón México _ Dance Symphony _ Rodeo Dances _ Lincoln Portrait _ Old American So
-WARNING:root:Album Not Found: Copland; Mehta, Doráti, Horne, Marriner | Fanfare For the Common Man _ Appalachian Spring _ El salón México _ Dance Symphony _ Rodeo Dances _ Lincoln Portrait _ Old American Son
-WARNING:root:Album Not Found: Copland; Mehta, Doráti, Horne, Marriner | Fanfare For the Common Man _ Appalachian Spring _ El salón México _ Dance Symphony _ Rodeo Dances _ Lincoln Portrait _ Old American Songs _ Mus
-WARNING:root:Album Not Found: Copland; Mehta, Doráti, Horne, Marriner | Fanfare For the Common Man _ Appalachian Spring _ El salón México _ Dance Symphony _ Rodeo Dances _ Lincoln Portrait _ Old American Songs _ Music
-WARNING:root:Album Not Found: Copland; Mehta, Doráti, Horne, Marriner | Fanfare For the Common Man _ Appalachian Spring _ El salón México _ Dance Symphony _ Rodeo Dances _ Lincoln Portrait _ Old American Songs _ Music for M
-WARNING:root:Album Not Found: Cranes | Everywhere
-WARNING:root:Album Not Found: Cranes | Jewel
-WARNING:root:Album Not Found: Creedence Clearwater Revival | Chronicle Vol. 1
-WARNING:root:Album Not Found: Cursive | Burst and Bloom
-WARNING:root:Album Not Found: David Bowie | Scary Monsters... and Super Creeps
-WARNING:root:Album Not Found: David Byrne & Brian Eno | Everything That Happens Will Happen Today
-WARNING:root:Album Not Found: De La Soul | 3 Feet High and Rising
-WARNING:root:Album Not Found: Dead Can Dance | Aion
-WARNING:root:Album Not Found: Dead Can Dance | Dead Can Dance _ Garden of the Arcane Delights
-WARNING:root:Album Not Found: Dead Can Dance | Into the Labyrinth
-WARNING:root:Album Not Found: Dead Can Dance | Spiritchaser
-WARNING:root:Album Not Found: Dead Can Dance | Spleen and Ideal
-WARNING:root:Album Not Found: Dead Can Dance | The Serpent's Egg
-WARNING:root:Album Not Found: Dead Can Dance | Toward the Within
-WARNING:root:Album Not Found: Dead Can Dance | Within the Realm of a Dying Sun
-WARNING:root:Album Not Found: Dead Kennedys | Fresh Fruit for Rotting Vegetables
 WARNING:root:Album Not Found: Dead Kennedys | Plastic Surgery Disasters _ In God We Trust, Inc_
-ERROR:root:General Album Failure: ./Dead_Can_Dance
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: Deerhoof | Apple O'
 WARNING:root:Album Not Found: Delerium | Syrophenikan
 WARNING:root:Album Not Found: Depeche Mode | Black Celebration
@@ -181,8 +41,6 @@ WARNING:root:Album Not Found: Front 242 | Geography
 WARNING:root:Album Not Found: Front 242 | Tyranny ▶For You◀
 WARNING:root:Album Not Found: Gang of Four | Solid Gold _ Another Day_Another Dollar
 WARNING:root:Album Not Found: Gastr del Sol | Crookt, Crackt, or Fly
-ERROR:root:General Album Failure: ./Geinoh_Yamashirogumi
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: George Acosta | Awake
 WARNING:root:Album Not Found: George Gershwin | A Tribute to the Glorious Songs and Magic of George Gershwin with an All-Star Cast
 WARNING:root:Album Not Found: George Gershwin | Rhapsody In Blue_An American In Paris
@@ -239,21 +97,16 @@ WARNING:root:Album Not Found: Man or Astro-Man_ | Project Infinity
 WARNING:root:Album Not Found: Man or Astro-Man_ | Unknown
 WARNING:root:Album Not Found: Manitoba | Up in Flames
 WARNING:root:Album Not Found: Marilyn Manson | Portrait of an American Family
-WARNING:root:Album Not Found: Marilyn Manson | Smells Like Children
 WARNING:root:Album Not Found: Marvin Gaye | The Very Best of Marvin Gaye
 WARNING:root:Album Not Found: Mephiskapheles | God Bless Satan
 WARNING:root:Album Not Found: Miles Davis | Live-Evil
 WARNING:root:Album Not Found: Miles Davis | On the Corner
-ERROR:root:General Album Failure: ./Miles_Davis
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: Millie Jackson | The Moods of Millie Jackson_ Her Best Ballads
 WARNING:root:Album Not Found: Ministry | The Land of Rape and Honey
 WARNING:root:Album Not Found: Minor Threat | Complete Discography
 WARNING:root:Album Not Found: Mirah with the Black Cat Orchestra | To All We Stretch the Open Arm
 WARNING:root:Album Not Found: Misfits | Collection I
 WARNING:root:Album Not Found: Moby | Animal Rights
-ERROR:root:General Album Failure: ./Modest_Mouse
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: MONO | Under the Pipal Tree
 WARNING:root:Album Not Found: Morphine | Like Swimming
 WARNING:root:Album Not Found: Morrissey | Kill Uncle
@@ -261,17 +114,11 @@ WARNING:root:Album Not Found: Moussorgsky; The Cleveland Orchestra, Lorin Maazel
 WARNING:root:Album Not Found: My Bloody Valentine | m b v
 WARNING:root:Album Not Found: Natalie Davies | Under the Covers
 WARNING:root:Album Not Found: New Order | (The Best of) New Order
-ERROR:root:General Album Failure: ./New_Order
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: Nico | Chelsea Girl
 WARNING:root:Album Not Found: Nico | Desertshore
 WARNING:root:Album Not Found: Nine Inch Nails | Fixed
 WARNING:root:Album Not Found: Nine Inch Nails | Sin
-ERROR:root:General Album Failure: ./Nine_Inch_Nails
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: Nirvana | In Utero
-ERROR:root:General Album Failure: ./OMD
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: Orchestral Manoeuvres in the Dark | The Best of OMD
 WARNING:root:Album Not Found: Ottorino Respighi | Pines of Rome _ The Birds _ Fountains of Rome (The Atlanta Symphony Orchestra feat. conductor_ Louis
 WARNING:root:Album Not Found: Ottorino Respighi | Pines of Rome _ The Birds _ Fountains of Rome (The Atlanta Symphony Orchestra feat. conductor_ Louis Lane)
@@ -281,8 +128,6 @@ WARNING:root:Album Not Found: Paul Oakenfold | Tranceport
 WARNING:root:Album Not Found: Paul van Dyk | Seven Ways
 WARNING:root:Album Not Found: Pavement | Slanted and Enchanted_ Luxe & Reduxe
 WARNING:root:Album Not Found: Phil Spector | Back to Mono (1958-1969)
-ERROR:root:General Album Failure: ./Phil_Spector_and_Various
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: Pink Floyd | Dark Side of the Moon
 WARNING:root:Album Not Found: Pixies | Pixies
 WARNING:root:Album Not Found: Pixies | Surfer Rosa
@@ -301,8 +146,6 @@ WARNING:root:Album Not Found: R.E.M_ | Murmur (Live In Toronto 1983)
 WARNING:root:Album Not Found: Ramones | Rocket to Russia
 WARNING:root:Album Not Found: Rimsky-Korsakov; Kirill Kondrashin, Concertgebouw Orchestra Amsterdam, H | Scheherazade
 WARNING:root:Album Not Found: Rimsky-Korsakov; Kirill Kondrashin, Concertgebouw Orchestra Amsterdam, Herman Krebbers | Scheherazade
-ERROR:root:General Album Failure: ./Rufus_Wainwright
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: Sam Cooke | Portrait of a Legend 1951-1964
 WARNING:root:Album Not Found: Sam Cooke | The Man and His Music
 WARNING:root:Album Not Found: Seabound | No Sleep Demon v2.0
@@ -311,8 +154,6 @@ WARNING:root:Album Not Found: Seven Red Seven | Bass State Coma
 WARNING:root:Album Not Found: Seven Red Seven | Liquid
 WARNING:root:Album Not Found: Seven Red Seven | Shelter
 WARNING:root:Album Not Found: Seven Red Seven | Superstition
-ERROR:root:General Album Failure: ./Sigur_Ros
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: Skinny Puppy | Bites and Remission
 WARNING:root:Album Not Found: Skinny Puppy | VIVIsectVI
 WARNING:root:Album Not Found: Sloan | 4 Nights at the Palais Royale
@@ -333,8 +174,6 @@ WARNING:root:Album Not Found: Stravinsky; Leonard Bernstein | Bernstein Conducts
 WARNING:root:Album Not Found: Stravinsky; Leonard Bernstein | Bernstein Conducts Stravinsky_ Le Sacre du printemps _ Pétrouchka _ L'Oiseau de feu - suite _ Scènes de ballet
 WARNING:root:Album Not Found: System 7 | Rite of Spring
 WARNING:root:Album Not Found: Talking Heads | Once in a Lifetime
-ERROR:root:General Album Failure: ./Talking_Heads
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: Tchaikovsky; Saint Louis Symphony Orchestra, Leonard Slatkin | Marche Slav and Other Russian Favorites
 WARNING:root:Album Not Found: The Beach Boys | Endless Summer
 WARNING:root:Album Not Found: The Beach Boys | Surf's Up
@@ -373,8 +212,6 @@ WARNING:root:Album Not Found: The Sisters of Mercy | Some Girls Wander by Mistak
 WARNING:root:Album Not Found: The Smiths | Best... I
 WARNING:root:Album Not Found: The Specials | The Specials
 WARNING:root:Album Not Found: The Stooges | Fun House
-ERROR:root:General Album Failure: ./The Trash Can Sinatras
- | 'NoneType' object is not iterable
 WARNING:root:Album Not Found: The Unicorns | Who Will Cut Our Hair When We're Gone_
 WARNING:root:Album Not Found: The Velvet Underground | Loaded
 WARNING:root:Album Not Found: The Velvet Underground | The Velvet Underground & Nico
