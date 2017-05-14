@@ -1,0 +1,2 @@
+deezer-python==0.6.0
+ngram==3.3.0
