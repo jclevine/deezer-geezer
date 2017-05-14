@@ -14,7 +14,7 @@ def create_playlists():
         playlist_title = 'fun-{}'.format(i)
         response = requests.post('http://api.deezer.com/user/me/playlists', params={
             'title': playlist_title,
-            'access_token': 'ny3yH5H692y7kWgL4xhTU384J9UmlXH3npdRmvELD7q3URzsL6',
+            'access_token': '',
             'expires': 0
         })
 
@@ -24,7 +24,7 @@ def create_playlists():
         for subplaylist in subplaylist_chunks:
             requests.post('http://api.deezer.com/playlist/{}/tracks'.format(new_playlist_id), params={
                 'songs': ','.join(subplaylist),
-                'access_token': 'ny3yH5H692y7kWgL4xhTU384J9UmlXH3npdRmvELD7q3URzsL6',
+                'access_token': '',
                 'expires': 0
             })
 
