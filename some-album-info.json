@@ -1,0 +1,62 @@
+[
+    {
+        "album_id": 1207252,
+        "album_title": "Midnight Marauders",
+        "artist_id": 1862,
+        "artist": "A Tribe Called Quest"
+    },
+    {
+        "album_id": 242316,
+        "album_title": "The Low End Theory",
+        "artist_id": 1862,
+        "artist": "A Tribe Called Quest"
+    },
+    {
+        "album_id": 9410100,
+        "album_title": "Back In Black",
+        "artist_id": 115,
+        "artist": "AC/DC"
+    },
+    {
+        "album_id": 9410164,
+        "album_title": "Dirty Deeds Done Dirt Cheap",
+        "artist_id": 115,
+        "artist": "AC/DC"
+    },
+    {
+        "album_id": 9410096,
+        "album_title": "High Voltage",
+        "artist_id": 115,
+        "artist": "AC/DC"
+    },
+    {
+        "album_id": 9410086,
+        "album_title": "Highway to Hell",
+        "artist_id": 115,
+        "artist": "AC/DC"
+    },
+    {
+        "album_id": 302924,
+        "album_title": "Moon Safari",
+        "artist_id": 369,
+        "artist": "Air"
+    },
+    {
+        "album_id": 393395,
+        "album_title": "Black Gives Way To Blue",
+        "artist_id": 691,
+        "artist": "Alice in Chains"
+    },
+    {
+        "album_id": 1399089,
+        "album_title": "Dirt",
+        "artist_id": 691,
+        "artist": "Alice in Chains"
+    },
+    {
+        "album_id": 1434830,
+        "album_title": "Facelift",
+        "artist_id": 691,
+        "artist": "Alice in Chains"
+    }
+]
