@@ -8,9 +8,9 @@ WARNING:root:Album Not Found: Bad Religion | Into the Unknown
 WARNING:root:Album Not Found: Bauhaus | Bela Lugosi's Dead
 WARNING:root:Album Not Found: Ben Folds Five | Naked Baby Photos
 WARNING:root:Album Not Found: Best Coast | Crazy for You
-WARNING:root:Album Not Found: Black Sabbath | Vol 4
-WARNING:root:Album Not Found: Bo Diddley | The Chess Box
-WARNING:root:Album Not Found: Bo Diddley | The Chess Years 1955 - 1974
+
+---
+
 WARNING:root:Album Not Found: Bob Dylan | Another Side of Bob Dylan
 WARNING:root:Album Not Found: Bob Dylan | Greatest Hits
 WARNING:root:Album Not Found: Bob Dylan & The Band | The Basement Tapes
@@ -202,7 +202,6 @@ WARNING:root:Album Not Found: Man or Astro-Man_ | Project Infinity
 WARNING:root:Album Not Found: Man or Astro-Man_ | Unknown
 WARNING:root:Album Not Found: Manitoba | Up in Flames
 WARNING:root:Album Not Found: Marilyn Manson | Portrait of an American Family
-WARNING:root:Album Not Found: Marilyn Manson | Smells Like Children
 WARNING:root:Album Not Found: Marvin Gaye | The Very Best of Marvin Gaye
 WARNING:root:Album Not Found: Mephiskapheles | God Bless Satan
 WARNING:root:Album Not Found: Miles Davis | Live-Evil
