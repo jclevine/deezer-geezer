@@ -6,7 +6,6 @@ def retrieve_tracks():
     with open('album-info.json') as albums_file:
         albums = json.loads(albums_file.read())
 
-
     all_tracks = []
     for album in albums:
         response = requests.get('https://api.deezer.com/album/{}'.format(album['album_id']))

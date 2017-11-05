@@ -28,5 +28,6 @@ def create_playlists():
                 'expires': 0
             })
 
+
 if __name__ == '__main__':
     create_playlists()
