@@ -3,16 +3,17 @@ import requests
 import json
 
 
-ACCESS_TOKEN = ''
+REGULAR_API_TOKEN = ''
+HIFI_ACCESS_TOKEN = ''
 
 
 def should_use_playlist(title):
-    return title.startswith('new') or title.startswith('super')
+    return title.startswith('super') or title.startswith('new')
 
 
 def get_all_playlist_ids():
     all_playlists = requests.get('http://api.deezer.com/user/me/playlists', params={
-        'access_token': ACCESS_TOKEN,
+        'access_token': HIFI_ACCESS_TOKEN,
         'expires': 0
     })
 
@@ -34,7 +35,7 @@ def get_all_tracks():
         print('{} has {} tracks'.format(playlist_id, len(tracks)))
     print('total tracks: {}'.format(len(all_tracks)))
     # Make into a unique set
-    all_tracks = sample(all_tracks, len(all_tracks))
+    all_tracks = sample(list(set(all_tracks)), len(list(set(all_tracks))))
 
     with open('all_tracks.txt', 'w') as all_tracks_file:
         all_tracks_file.writelines(['{}\n'.format(str(track)) for track in all_tracks])
@@ -71,17 +72,17 @@ def all_tracks_added(updated_playlist_count, expected_playlist_count):
 def add_playlist_chunk(playlist_id, playlist):
     requests.post('http://api.deezer.com/playlist/{}/tracks'.format(playlist_id), params={
         'songs': ','.join(playlist),
-        'access_token': ACCESS_TOKEN,
+        'access_token': REGULAR_API_TOKEN,
         'expires': 0
     })
 
 
 def create_playlist(i, playlist):
-    print('Playlist {} has {} tracks'.format(i, len(playlist)))
-    playlist_title = 'super-fun-{}'.format(i)
+    print('Playlist {0:0>2} has {1} tracks'.format(i, len(playlist)))
+    playlist_title = 'fun-{0:0>2}'.format(i)
     response = requests.post('http://api.deezer.com/user/me/playlists', params={
         'title': playlist_title,
-        'access_token': ACCESS_TOKEN,
+        'access_token': REGULAR_API_TOKEN,
         'expires': 0
     })
 
@@ -99,11 +100,18 @@ def get_track_ids_for(url):
 def api_call(url):
     return json.loads(
         requests.get(url, params={
-            'access_token': ACCESS_TOKEN,
+            'access_token': HIFI_ACCESS_TOKEN,
             'expires': 0
         }).text)
 
 
+def get_all_favourite_tracks():
+    all_tracks = get_track_ids_for('http://api.deezer.com/user/me/tracks')
+    with open('all_favourites.txt', 'w') as all_tracks_file:
+        all_tracks_file.writelines(['{}\n'.format(str(track)) for track in all_tracks])
+
+
 if __name__ == '__main__':
     get_all_tracks()
-    upload_tracks('all_tracks.txt')
+    # upload_tracks('all_tracks.txt')
+    # get_all_favourite_tracks()
