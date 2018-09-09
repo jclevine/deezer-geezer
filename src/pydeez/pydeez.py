@@ -1,3 +1,3 @@
 class PyDeez:
-    def get_playlists(self, name_predicate):
+    def get_track_ids_for_playlists(self, name_predicate):
         pass
