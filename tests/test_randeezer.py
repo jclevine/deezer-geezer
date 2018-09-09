@@ -1,4 +1,4 @@
-from randeezer import randeezer
+from src.randeezer import randeezer
 from unittest import TestCase
 from unittest.mock import Mock, patch
 from src.simple_track import SimpleTrack
@@ -6,7 +6,7 @@ from src.simple_track import SimpleTrack
 
 class TestRandeezer(TestCase):
 
-    @patch('randeezer.writelines')
+    @patch('src.randeezer.writelines')
     def test_no_playlists_no_nothing(self, mock_write):
         """
         Given no playlists that start with 'moo'
@@ -20,15 +20,15 @@ class TestRandeezer(TestCase):
         mock_client = Mock()
         mock_client.get_track_ids_for_playlists.return_value = []
 
-        def starts_with_moo(x): x.starts_with('moo')
-        randeezer(deezer_client=mock_client, playlist_name_predicate=starts_with_moo,
+        playlist_name_predicate = 'starts_with_moo'
+        randeezer(deezer_client=mock_client, playlist_name_predicate=playlist_name_predicate,
                   new_playlist_prefix='yes', track_infos_filepath='nothing.txt')
-        mock_client.get_track_ids_for_playlists.assert_called_with(starts_with_moo)
+        mock_client.get_track_ids_for_playlists.assert_called_with(playlist_name_predicate)
         mock_write.assert_not_called()
         mock_client.create_playlist.assert_not_called()
 
-    @patch('randeezer.uniq_randomize_list', side_effect=lambda x: list(reversed(x)))
-    @patch('randeezer.writelines')
+    @patch('src.randeezer.uniq_randomize_list', side_effect=lambda x: list(reversed(x)))
+    @patch('src.randeezer.writelines')
     def test_playlist_with_tracks_randomizes_saves_info_and_makes_new_list_and_does_not_delete_old_playlists(
             self, mock_write, _):
         """
@@ -51,13 +51,12 @@ class TestRandeezer(TestCase):
             SimpleTrack('1-isrc', '1-artist-name', '1-album-title', '1-title')
         ]
 
-        def starts_with_moo(x): x.starts_with('moo')
-
-        randeezer(deezer_client=mock_client, playlist_name_predicate=starts_with_moo,
+        playlist_name_predicate = 'starts_with_moo'
+        randeezer(deezer_client=mock_client, playlist_name_predicate=playlist_name_predicate,
                   new_playlist_prefix='yes', track_infos_filepath='track_infos.txt',
                   do_delete_old_playlists=False)
 
-        mock_client.get_track_ids_for_playlists.assert_called_with(starts_with_moo)
+        mock_client.get_track_ids_for_playlists.assert_called_with(playlist_name_predicate)
         mock_client.create_playlists.assert_called_with('yes', ['3', '2', '1'])
         mock_client.get_tracks.assert_called_with(['3', '2', '1'])
         mock_write.assert_called_with('track_infos.txt', [

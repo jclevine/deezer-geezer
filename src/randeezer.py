@@ -1,4 +1,4 @@
-from common import writelines, uniq_randomize_list
+from src.common import writelines, uniq_randomize_list
 from logging import warning
 
 
