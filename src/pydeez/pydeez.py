@@ -1,4 +1,5 @@
 from src.pydeez.helper import json_get, get_all_pages_for
+from src.common import flatten
 
 
 class PyDeez:
@@ -18,10 +19,7 @@ class PyDeez:
         return [playlist['id'] for playlist in all_playlists if title_predicate(playlist['title'])]
 
     def _get_track_ids_by_playlist_ids(self, playlist_ids):
-        all_track_ids = []
-        for playlist_id in playlist_ids:
-            all_track_ids.extend(self._get_track_ids_by_playlist_id(playlist_id))
-        return all_track_ids
+        return flatten([self._get_track_ids_by_playlist_id(playlist_id) for playlist_id in playlist_ids])
 
     def _get_track_ids_by_playlist_id(self, playlist_id):
         return get_all_pages_for(
