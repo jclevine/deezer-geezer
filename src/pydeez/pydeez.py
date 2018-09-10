@@ -8,7 +8,7 @@ class PyDeez:
     PLAYLIST_TRACKS_URL = '{}/playlist/{{}}/tracks'.format(BASE_URL)
 
     def __init__(self, access_token):
-        self._request_params = {'access_token': access_token, 'expires': 0}
+        self._request_params = {'access_token': access_token, 'expires': 0, 'limit': 2000}
 
     def get_track_ids_for_playlists(self, title_predicate):
         playlist_ids = self._get_all_playlist_ids(title_predicate)

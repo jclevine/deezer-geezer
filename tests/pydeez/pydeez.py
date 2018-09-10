@@ -44,8 +44,10 @@ class TestPyDeez(TestCase):
         track_ids | expect.to.be.equal.to(['track-1', 'track-2', 'track-3'])
         (mock_requests.get.call_args_list |
          expect.to.be.equal([
-             call('http://api.deezer.com/user/me/playlists', params={'access_token': 'access-token', 'expires': 0}),
-             call('http://api.deezer.com/playlist/2/tracks', params={'access_token': 'access-token', 'expires': 0})
+             call('http://api.deezer.com/user/me/playlists',
+                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
+             call('http://api.deezer.com/playlist/2/tracks',
+                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000})
          ]))
 
     @patch('src.pydeez.helper.requests')
@@ -67,15 +69,18 @@ class TestPyDeez(TestCase):
             ['moo-match-track-1', 'moo-match-track-2', 'moo-too-track-1', 'moo-too-track-2'])
         (mock_requests.get.call_args_list |
          expect.to.be.equal([
-             call('http://api.deezer.com/user/me/playlists', params={'access_token': 'access-token', 'expires': 0}),
-             call('http://api.deezer.com/playlist/2/tracks', params={'access_token': 'access-token', 'expires': 0}),
-             call('http://api.deezer.com/playlist/3/tracks', params={'access_token': 'access-token', 'expires': 0})
+             call('http://api.deezer.com/user/me/playlists',
+                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
+             call('http://api.deezer.com/playlist/2/tracks',
+                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
+             call('http://api.deezer.com/playlist/3/tracks',
+                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
          ]))
 
     @patch('src.pydeez.helper.requests')
     def test_eight_tracks_if_2_playlists_match_each_one_with_2_pages_of_2_tracks(self, mock_requests):
         """
-        Given there are 2 playlists that start with 'moo', each with 4 tracks in 2 pages
+        Given there are 2 playlists that start with 'moo', each with 2 tracks in 2 pages
          When you get the track ids for playlists that start with 'moo'
          Then you get 4 tracks back
         """
@@ -97,13 +102,16 @@ class TestPyDeez(TestCase):
              ])
         (mock_requests.get.call_args_list |
          expect.to.be.equal([
-             call('http://api.deezer.com/user/me/playlists', params={'access_token': 'access-token', 'expires': 0}),
-             call('http://api.deezer.com/playlist/2/tracks', params={'access_token': 'access-token', 'expires': 0}),
+             call('http://api.deezer.com/user/me/playlists',
+                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
+             call('http://api.deezer.com/playlist/2/tracks',
+                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
              call('http://api.deezer.com/playlist/2/tracks?{}'.format(urlencode(
                  {'access_token': 'access-token', 'expires': 0, 'index': '2'})),
-                 params={'access_token': 'access-token', 'expires': 0}),
-             call('http://api.deezer.com/playlist/3/tracks', params={'access_token': 'access-token', 'expires': 0}),
+                 params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
+             call('http://api.deezer.com/playlist/3/tracks',
+                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
              call('http://api.deezer.com/playlist/3/tracks?{}'.format(urlencode(
                  {'access_token': 'access-token', 'expires': 0, 'index': '2'})),
-                 params={'access_token': 'access-token', 'expires': 0}),
+                 params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
          ]))
