@@ -115,3 +115,23 @@ class TestPyDeez(TestCase):
                  {'access_token': 'access-token', 'expires': 0, 'index': '2'})),
                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
          ]))
+
+    @patch('src.pydeez.helper.requests')
+    def test_given_name_of_playlist_when_you_create_a_list_then_it_requests_a_new_playlist_of_that_name(
+            self, mock_requests):
+        """
+        Given you have a name of a playlist
+         When you create a playlist with that name
+         Then Deezer is requested to create that playlist
+        """
+        mock_requests.post.return_value = build_response_mock({'id': '123'})
+        pydeez = PyDeez('access-token')
+        id = pydeez.create_playlist('playlist-name')
+        id | expect.to.be.equal('123')
+        (mock_requests.post.call_args_list[0] |
+         expect.to.be.equal(
+             call('http://api.deezer.com/user/me/playlists',
+                  params={'access_token': 'access-token', 'expires': 0, 'title': 'playlist-name', 'limit': 2000}),
+         ))
+
+

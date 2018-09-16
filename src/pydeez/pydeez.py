@@ -1,4 +1,4 @@
-from src.pydeez.helper import json_get, get_all_pages_for
+from src.pydeez.helper import json_get, get_all_pages_for, json_post
 from src.common import flatten
 
 
@@ -13,6 +13,11 @@ class PyDeez:
     def get_track_ids_for_playlists(self, title_predicate):
         playlist_ids = self._get_all_playlist_ids(title_predicate)
         return self._get_track_ids_by_playlist_ids(playlist_ids) if playlist_ids else []
+
+    def create_playlist(self, title):
+        request_params = self._request_params.copy()
+        request_params['title'] = title
+        return json_post(self.MY_PLAYLISTS_URL, params=request_params)['id']
 
     def _get_all_playlist_ids(self, title_predicate):
         all_playlists = json_get(self.MY_PLAYLISTS_URL, params=self._request_params)['data']
