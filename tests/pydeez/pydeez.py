@@ -117,21 +117,34 @@ class TestPyDeez(TestCase):
          ]))
 
     @patch('src.pydeez.helper.requests')
-    def test_given_name_of_playlist_when_you_create_a_list_then_it_requests_a_new_playlist_of_that_name(
+    def test_given_list_of_tracks_ids_when_you_create_playlits_then_it_creates_as_many_playlists_as_it_needs(
             self, mock_requests):
         """
-        Given you have a name of a playlist
-         When you create a playlist with that name
-         Then Deezer is requested to create that playlist
+        Given you have a list of track ids -- 3 -- longer than the max size for the client, 2
+         When you create playlists for all of the tracks
+         Then Deezer creates 2 playlists
         """
-        mock_requests.post.return_value = build_response_mock({'id': '123'})
+        mock_requests.post.side_effect = [
+            build_response_mock({'id': '11'}),  # 1st playlist
+            build_response_mock({'id': '_'}),  # Add 1st playlist tracks
+            build_response_mock({'id': '22'}),  # 2st playlist
+            build_response_mock({'id': '_'})  # Add 2nd playlist tracks
+        ]
         pydeez = PyDeez('access-token')
-        id = pydeez.create_playlist('playlist-name')
-        id | expect.to.be.equal('123')
-        (mock_requests.post.call_args_list[0] |
-         expect.to.be.equal(
+        ids = pydeez.create_playlists('prefix', [1, 2, 3], max_playlist_size=2, max_per_request_size=2)
+        ids | expect.to.be.equal(['11', '22'])
+        (mock_requests.post.call_args_list |
+         expect.to.be.equal([
              call('http://api.deezer.com/user/me/playlists',
-                  params={'access_token': 'access-token', 'expires': 0, 'title': 'playlist-name', 'limit': 2000}),
-         ))
+                  params={'access_token': 'access-token', 'expires': 0, 'title': 'prefix-00', 'limit': 2000}),
+             call('http://api.deezer.com/playlist/11/tracks',
+                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000,
+                          'songs': '1,2'}),
+             call('http://api.deezer.com/user/me/playlists',
+                  params={'access_token': 'access-token', 'expires': 0, 'title': 'prefix-01', 'limit': 2000}),
+             call('http://api.deezer.com/playlist/22/tracks',
+                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000,
+                          'songs': '3'}),
+         ]))
 
 

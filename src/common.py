@@ -13,3 +13,7 @@ def uniq_randomize_list(a_list):  # pragma: no cover
 
 def flatten(a_list):
     return list(chain.from_iterable(a_list))
+
+
+def chunk_list(a_list, chunk_size):
+    return [a_list[i:i + chunk_size] for i in range(0, len(a_list), chunk_size)]
