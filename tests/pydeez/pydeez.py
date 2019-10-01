@@ -12,11 +12,12 @@ from tests.mock_data.eight_tracks_if_2_playlists_match_each_one_with_2_pages_of_
     moo_too_track_playlist_page_one, moo_too_track_playlist_page_two
 )
 from urllib.parse import urlencode
+from src.pydeez import SimpleTrackDeezer
 
 
+@patch('src.pydeez.helper.requests')
 class TestPyDeez(TestCase):
 
-    @patch('src.pydeez.helper.requests')
     def test_no_tracks_if_no_playlists_match(self, mock_requests):
         """
         Given there are no playlists that start with 'moo'
@@ -28,7 +29,6 @@ class TestPyDeez(TestCase):
         track_ids = pydeez.get_track_ids_for_playlists(lambda playlist_name: playlist_name.startswith('moo'))
         track_ids | expect.to.have.length.of(0)
 
-    @patch('src.pydeez.helper.requests')
     def test_three_tracks_if_1_playlist_matches_that_has_3_tracks(self, mock_requests):
         """
         Given there is 1 playlist that start with 'moo' that has 3 tracks
@@ -50,7 +50,6 @@ class TestPyDeez(TestCase):
                   params={'access_token': 'access-token', 'expires': 0, 'limit': 2000})
          ]))
 
-    @patch('src.pydeez.helper.requests')
     def test_four_tracks_if_2_playlists_match_each_one_with_2_tracks(self, mock_requests):
         """
         Given there are 2 playlists that start with 'moo', each with 2 tracks
@@ -77,7 +76,6 @@ class TestPyDeez(TestCase):
                   params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
          ]))
 
-    @patch('src.pydeez.helper.requests')
     def test_eight_tracks_if_2_playlists_match_each_one_with_2_pages_of_2_tracks(self, mock_requests):
         """
         Given there are 2 playlists that start with 'moo', each with 2 tracks in 2 pages
@@ -116,7 +114,6 @@ class TestPyDeez(TestCase):
                  params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
          ]))
 
-    @patch('src.pydeez.helper.requests')
     def test_given_list_of_tracks_ids_when_you_create_playlits_then_it_creates_as_many_playlists_as_it_needs(
             self, mock_requests):
         """
@@ -147,4 +144,41 @@ class TestPyDeez(TestCase):
                           'songs': '3'}),
          ]))
 
+    def test_get_tracks_by_ids(self, mock_requests):
+        """
+        Given that 5 tracks exist with the ids 1 - 5
+         When you get all those tracks
+         Then you get the track infos
+        """
+        mock_requests.get.side_effect = [
+            build_response_mock(SimpleTrackDeezer('1', 'isrc-1', 'artist-1', 'album-1', 'track-1').to_dict()),
+            build_response_mock(SimpleTrackDeezer('2', 'isrc-2', 'artist-2', 'album-2', 'track-2').to_dict()),
+            build_response_mock(SimpleTrackDeezer('3', 'isrc-3', 'artist-3', 'album-3', 'track-3').to_dict()),
+            build_response_mock(SimpleTrackDeezer('4', 'isrc-4', 'artist-4', 'album-4', 'track-4').to_dict()),
+            build_response_mock(SimpleTrackDeezer('5', 'isrc-5', 'artist-5', 'album-5', 'track-5').to_dict())
+        ]
 
+        pydeez = PyDeez('access-token')
+        tracks = [str(track) for track in pydeez.get_tracks(range(1, 6))]
+
+        (mock_requests.get.call_args_list |
+         expect.to.be.equal([
+             call(
+                 'http://api.deezer.com/track/1', params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
+             call(
+                 'http://api.deezer.com/track/2', params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
+             call(
+                 'http://api.deezer.com/track/3', params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
+             call(
+                 'http://api.deezer.com/track/4', params={'access_token': 'access-token', 'expires': 0, 'limit': 2000}),
+             call(
+                 'http://api.deezer.com/track/5', params={'access_token': 'access-token', 'expires': 0, 'limit': 2000})
+         ]))
+
+        tracks | expect.to.be.equal([
+            'isrc-1||artist-1||album-1||track-1',
+            'isrc-2||artist-2||album-2||track-2',
+            'isrc-3||artist-3||album-3||track-3',
+            'isrc-4||artist-4||album-4||track-4',
+            'isrc-5||artist-5||album-5||track-5'
+        ])

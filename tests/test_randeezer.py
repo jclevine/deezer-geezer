@@ -19,10 +19,11 @@ class TestRandeezer(TestCase):
         """
         mock_client = Mock()
         mock_client.get_track_ids_for_playlists.return_value = []
+        mock_track_infos_file = Mock()
 
         playlist_name_predicate = 'starts_with_moo'
         randeezer(deezer_client=mock_client, playlist_name_predicate=playlist_name_predicate,
-                  new_playlist_prefix='yes', track_infos_filepath='nothing.txt')
+                  new_playlist_prefix='yes', track_infos_file=mock_track_infos_file)
         mock_client.get_track_ids_for_playlists.assert_called_with(playlist_name_predicate)
         mock_write.assert_not_called()
         mock_client.create_playlist.assert_not_called()
@@ -51,15 +52,17 @@ class TestRandeezer(TestCase):
             SimpleTrack('1-isrc', '1-artist-name', '1-album-title', '1-title')
         ]
 
+        mock_track_info_file = Mock()
+
         playlist_name_predicate = 'starts_with_moo'
         randeezer(deezer_client=mock_client, playlist_name_predicate=playlist_name_predicate,
-                  new_playlist_prefix='yes', track_infos_filepath='track_infos.txt',
+                  new_playlist_prefix='yes', track_infos_file=mock_track_info_file,
                   do_delete_old_playlists=False)
 
         mock_client.get_track_ids_for_playlists.assert_called_with(playlist_name_predicate)
         mock_client.create_playlists.assert_called_with('yes', ['3', '2', '1'])
-        mock_client.get_tracks.assert_called_with(['3', '2', '1'])
-        mock_write.assert_called_with('track_infos.txt', [
+        mock_client.get_tracks.assert_called_with(['3', '2', '1'], mock_track_info_file)
+        mock_write.assert_called_with(mock_track_info_file, [
             '3-isrc||3-artist-name||3-album-title||3-title',
             '2-isrc||2-artist-name||2-album-title||2-title',
             '1-isrc||1-artist-name||1-album-title||1-title'

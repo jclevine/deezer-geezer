@@ -1,11 +1,13 @@
 from src.pydeez.helper import json_get, get_all_pages_for, json_post
 from src.common import flatten, chunk_list
+from .simple_track_deezer import SimpleTrackDeezer
 
 
 class PyDeez:
     BASE_URL = 'http://api.deezer.com'
     MY_PLAYLISTS_URL = '{}{}'.format(BASE_URL, '/user/me/playlists')
     PLAYLIST_TRACKS_URL = '{}/playlist/{{}}/tracks'.format(BASE_URL)
+    TRACK_URL = '{}/track/{{}}'.format(BASE_URL)
     MAX_PLAYLIST_SIZE = 2000
 
     def __init__(self, access_token):
@@ -52,3 +54,15 @@ class PyDeez:
     def _get_track_ids_by_playlist_id(self, playlist_id):
         return get_all_pages_for(
             self.PLAYLIST_TRACKS_URL.format(playlist_id), self._request_params, lambda track: track['id'])
+
+    def get_tracks(self, ids, append_file=None):
+        return [self.get_track_and_append(id, append_file) for id in ids]
+
+    def get_track(self, id):
+        return json_get(self.TRACK_URL.format(id), self._request_params)
+
+    def get_track_and_append(self, id, f):
+        track = SimpleTrackDeezer.from_dict(self.get_track(id))
+        if f is not None:
+            f.write('{}\n'.format(str(track)))
+        return track

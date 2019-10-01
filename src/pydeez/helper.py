@@ -4,7 +4,8 @@ from itertools import chain
 
 
 def json_get(url, params):
-    return json.loads(requests.get(url, params=params).text)
+    text = requests.get(url, params=params).text
+    return json.loads(text)
 
 
 def json_post(url, **kwargs):

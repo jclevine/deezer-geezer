@@ -4,7 +4,12 @@ from itertools import chain
 
 def writelines(filepath, lines):  # pragma: no cover
     with open(filepath, 'w') as f:
-        f.writelines(lines)
+        f.writelines('\n'.join(lines))
+
+
+def readlines(filepath):  # pragma: no cover
+    with open(filepath, 'r') as f:
+        return f.readlines()
 
 
 def uniq_randomize_list(a_list):  # pragma: no cover
